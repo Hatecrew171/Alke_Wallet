@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alke Wallet - Inicio</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-dark bg-dark px-3 shadow">
+        <span class="navbar-brand fw-bold">💰 Alke Wallet</span>
+        <button class="btn btn-danger btn-sm logout">Salir</button>
+    </nav>
+
+    <div class="container mt-4 mt-md-5 text-center">
+        <div class="card p-4 p-md-5 shadow-sm mb-4 bg-white border-0">
+            <h6 class="text-muted mb-2 small">MI SALDO DISPONIBLE</h6>
+            <h1 class="display-4 display-md-2 fw-bold text-success"><span id="balanceDisplay"></span></h1>
+        </div>
+
+        <div class="row g-3">
+            <div class="col-12 col-md-4">
+                <button class="btn btn-lg btn-nav btn-primary w-100 py-4 shadow-sm fw-bold" data-target="deposit.html" data-name="Depósitos">DEPOSITAR</button>
+            </div>
+            <div class="col-12 col-md-4">
+                <button class="btn btn-lg btn-nav btn-success w-100 py-4 shadow-sm fw-bold" data-target="sendmoney.html" data-name="Transferencias">ENVIAR</button>
+            </div>
+            <div class="col-12 col-md-4">
+                <button class="btn btn-lg btn-nav btn-secondary w-100 py-4 shadow-sm fw-bold" data-target="transactions.html" data-name="Movimientos">HISTORIAL</button>
+            </div>
+        </div>
+        <p id="redirectMsg" class="mt-4 fw-bold text-primary" style="display:none"></p>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>
