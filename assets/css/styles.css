@@ -1,0 +1,74 @@
+/* Estilos Generales */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+/* Tarjetas y Contenedores */
+.card {
+    border-radius: 12px;
+    border: none;
+}
+
+/* Botones de Navegación del Menú */
+.btn-nav {
+    border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.btn-nav:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+/* Estilo para el Saldo Principal */
+#balanceDisplay {
+    letter-spacing: -1px;
+}
+
+/* --- MEDIA QUERIES PARA MÓVILES --- */
+
+@media (max-width: 768px) {
+    /* Ajustamos el tamaño del saldo en pantallas pequeñas para que no se corte */
+    .display-4, .display-2 {
+        font-size: 2.2rem !important;
+    }
+
+    /* Los botones en móvil deben ser más altos para facilitar el toque */
+    .btn-nav {
+        padding: 2rem 1rem !important;
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Reducimos el padding de los contenedores para ganar espacio */
+    .container {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+    /* La tabla de transacciones se vuelve scrolleable horizontalmente */
+    .table-responsive {
+        font-size: 0.85rem;
+    }
+
+    /* Ajustamos el Navbar */
+    .navbar-brand {
+        font-size: 1rem;
+    }
+}
+
+/* Animación simple para cambios de sección */
+.animate-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
