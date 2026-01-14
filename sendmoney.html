@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alke Wallet - Enviar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/assets/css/styles.css">
+</head>
+<body class="bg-light">
+    <nav class="navbar navbar-dark bg-dark px-3 mb-4"><span class="navbar-brand">Enviar Dinero</span></nav>
+    <div class="container mb-5" id="sendContainer">
+        <div class="row g-4">
+            <div class="col-12 col-lg-7">
+                <div class="card p-4 shadow-sm border-0">
+                    <h5 class="fw-bold mb-3">1. Seleccionar Destinatario</h5>
+                    <input type="text" id="searchContact" class="form-control mb-3" placeholder="🔍 Buscar por nombre...">
+                    <select id="selectContacto" class="form-select mb-3" size="5"></select>
+                    
+                    <div id="seccionMonto" class="d-none border-top pt-3">
+                        <label class="form-label fw-bold">2. Monto a enviar</label>
+                        <input type="number" id="montoEnvio" class="form-control form-control-lg mb-3" placeholder="$ 0">
+                        <button id="btnTransferir" class="btn btn-warning w-100 fw-bold shadow-sm">TRANSFERIR</button>
+                        <p id="msgExito" class="text-success mt-3 text-center fw-bold" style="display:none"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-lg-5">
+                <button id="btnNuevoC" class="btn btn-outline-primary w-100 mb-3 shadow-sm">+ Nuevo Contacto</button>
+                <div id="formContacto" class="card p-3 shadow-sm border-0" style="display:none">
+                    <h6 class="fw-bold">Datos del Contacto</h6>
+                    <form id="newContactForm">
+                        <input type="text" id="nomC" class="form-control mb-2" placeholder="Nombre" required>
+                        <input type="text" id="rutC" class="form-control mb-3" placeholder="RUT (12.345.678-9)" required>
+                        <button type="submit" class="btn btn-success w-100 mb-2">Guardar</button>
+                        <button type="button" id="btnCancelarC" class="btn btn-light border w-100">Cerrar</button>
+                    </form>
+                </div>
+                <a href="menu.html" class="btn btn-secondary w-100 mt-3">Volver al Menú</a>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="/assets/js/script.js"></script>
+</body>
+</html>
